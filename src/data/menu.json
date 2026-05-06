@@ -1,52 +1,52 @@
 {
   "sections": [
     {
-      "label": "About",
-      "shortLabel": "About",
+      "label": "Sobre Mí",
+      "shortLabel": "Sobre Mí",
       "href": "#about",
-      "desc": "Background, experience, and approach"
+      "desc": "Mi trayectoria y experiencia"
     },
     {
-      "label": "Expertise",
-      "shortLabel": "Expertise",
+      "label": "Especialidades",
+      "shortLabel": "Especialidades",
       "href": "#expertise",
-      "desc": "What I focus on and how I work"
+      "desc": "En qué me especializo y cómo trabajo"
     },
     {
-      "label": "Skills",
-      "shortLabel": "Skills",
+      "label": "Habilidades",
+      "shortLabel": "Habilidades",
       "href": "#skills",
-      "desc": "Tools and technologies I use"
+      "desc": "Herramientas y tecnologías que uso"
     },
     {
       "label": "Portfolio",
       "shortLabel": "Portfolio",
       "href": "#portfolio",
-      "desc": "Client and commercial work"
+      "desc": "Trabajos y proyectos"
     },
     {
-      "label": "Projects",
-      "shortLabel": "Projects",
+      "label": "Proyectos",
+      "shortLabel": "Proyectos",
       "href": "#projects",
-      "desc": "Personal projects and experiments"
+      "desc": "Proyectos técnicos destacados"
     },
     {
-      "label": "Certifications",
-      "shortLabel": "Certs",
+      "label": "Exp. y Formación",
+      "shortLabel": "Formación",
       "href": "#certifications",
-      "desc": "Training, courses, and credentials"
+      "desc": "Estudios y experiencia profesional"
     },
     {
-      "label": "Services",
-      "shortLabel": "Services",
+      "label": "Servicios",
+      "shortLabel": "Servicios",
       "href": "#services",
-      "desc": "Sites and projects I run"
+      "desc": "Empresas y proyectos donde trabajo"
     },
     {
-      "label": "Contact",
-      "shortLabel": "Contact",
+      "label": "Contacto",
+      "shortLabel": "Contacto",
       "href": "#contact",
-      "desc": "Start a project or just say hello"
+      "desc": "Escríbeme o dime hola"
     }
   ]
 }

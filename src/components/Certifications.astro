@@ -28,17 +28,17 @@ function cardModClass(type: CertType) {
 <section id="certifications" class="py-24" style="scroll-margin-top: 80px;">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 reveal">
-      <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3">Credentials</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title">Certifications</h2>
+      <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3">Credenciales</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title">Experiencia y Formación</h2>
       <div class="flex flex-wrap items-center justify-center gap-4 mt-5">
         <span class="legend-item">
-          <span class="legend-dot dot-earned"></span>Certification
+          <span class="legend-dot dot-earned"></span>Completado
         </span>
         <span class="legend-item">
-          <span class="legend-dot dot-pro-dev"></span>Professional Development
+          <span class="legend-dot dot-pro-dev"></span>Experiencia Profesional
         </span>
         <span class="legend-item">
-          <span class="legend-dot dot-in-progress"></span>In Progress
+          <span class="legend-dot dot-in-progress"></span>En Curso
         </span>
       </div>
     </div>
@@ -80,7 +80,7 @@ function cardModClass(type: CertType) {
                   {type === 'in-progress' ? (
                     <span class="in-progress-label">
                       <span class="ip-pulse" />
-                      Actively Studying
+                      Estudiando activamente
                     </span>
                   ) : cert.credentialUrl ? (
                     <a
@@ -91,8 +91,8 @@ function cardModClass(type: CertType) {
                     >
                       <span>
                         {type === 'professional-development'
-                          ? 'View Certificate'
-                          : 'View Credential'}
+                          ? 'Ver Certificado'
+                          : 'Ver Credencial'}
                       </span>
                       <svg
                         class="w-3.5 h-3.5"
@@ -109,7 +109,7 @@ function cardModClass(type: CertType) {
                       </svg>
                     </a>
                   ) : (
-                    <span class="text-slate-700 text-xs italic">No link available</span>
+                    <span class="text-slate-700 text-xs italic">Sin enlace disponible</span>
                   )}
                 </div>
               </div>

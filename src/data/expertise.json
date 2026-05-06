@@ -1,22 +1,22 @@
 [
   {
     "key": "sysadmin",
-    "title": "Design & Art Direction",
-    "description": "Visual identity, layout, typography, and the aesthetic decisions that make people stop and look twice. Whether print or screen, the goal is the same — work that holds up."
+    "title": "Soporte IT & Help Desk",
+    "description": "Resolución de incidencias hardware y software, diagnóstico y troubleshooting, soporte técnico a usuarios y clientes. Experiencia en entornos reales con mantenimiento y reparación de equipos informáticos."
+  },
+  {
+    "key": "networks",
+    "title": "Redes & Infraestructura",
+    "description": "Configuración de redes empresariales UniFi, instalación de cableado Ethernet, configuración y gestión de sistemas NAS, firewall y seguridad informática. Experiencia práctica en instalaciones para clientes reales."
   },
   {
     "key": "webdev",
-    "title": "Web Design & Development",
-    "description": "From wireframe to deployment — building sites and apps that look considered, perform well, and give visitors exactly what they came for."
+    "title": "Desarrollo Web & SEO",
+    "description": "Diseño y mantenimiento de páginas web con WordPress, HTML y CSS. Optimización SEO, diseño responsive, mejora de experiencia de usuario y gestión de contenido web para empresas."
   },
   {
-    "key": "freelance",
-    "title": "Creative Freelance",
-    "description": "Independent project work in photography, video, 3D, illustration, or wherever the brief leads. Direct to work with, flexible, and invested in the outcome."
-  },
-  {
-    "key": "leadership",
-    "title": "Collaboration & Direction",
-    "description": "Working alongside teams, clients, and stakeholders to take a project from idea to shipped — clear communication, honest timelines, and work that actually gets done."
+    "key": "ai",
+    "title": "IA & Productividad Digital",
+    "description": "Uso productivo de herramientas de inteligencia artificial (ChatGPT, Claude, Gemini, Veo3) para automatización, generación de contenido y optimización de tareas. Marketing digital, Canva y diseño gráfico."
   }
 ]

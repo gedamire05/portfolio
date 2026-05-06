@@ -1,59 +1,54 @@
 [
   {
-    "title": "Design & Illustration",
+    "title": "Soporte IT & Sistemas",
     "skills": [
-      { "name": "Figma", "logo": "/images/icons/devicons/figma-original.svg" },
-      { "name": "Photoshop", "logo": "/images/icons/devicons/photoshop-line.svg" },
-      { "name": "Illustrator", "logo": "/images/icons/devicons/illustrator-line.svg" },
-      { "name": "Blender", "logo": "/images/icons/devicons/blender-original.svg" },
-      { "name": "Sketch", "logo": "/images/icons/devicons/sketch-original.svg" }
+      { "name": "Linux", "logo": "/images/icons/devicons/linux-plain.svg" },
+      { "name": "Bash", "logo": "/images/icons/devicons/bash-original.svg" },
+      { "name": "Docker", "logo": "/images/icons/devicons/docker-original-wordmark.svg" },
+      { "name": "Nginx", "logo": "/images/icons/devicons/nginx-original.svg" },
+      { "name": "Git", "logo": "/images/icons/devicons/git-original-wordmark.svg" }
     ]
   },
   {
-    "title": "Web & Frontend",
+    "title": "Web & Desarrollo",
     "skills": [
       { "name": "HTML5", "logo": "/images/icons/devicons/html5-original.svg" },
       { "name": "CSS3", "logo": "/images/icons/devicons/css3-original.svg" },
       { "name": "JavaScript", "logo": "/images/icons/devicons/javascript-original.svg" },
-      { "name": "TypeScript", "logo": "/images/icons/devicons/typescript-original.svg" },
-      { "name": "React", "logo": "/images/icons/devicons/react-original.svg" },
-      { "name": "Bootstrap", "logo": "/images/icons/devicons/bootstrap-original-wordmark.svg" }
+      { "name": "WordPress", "logo": "/images/icons/devicons/wordpress-original.svg" }
     ]
   },
   {
-    "title": "Motion, 3D & Video",
+    "title": "Bases de Datos & Herramientas",
     "skills": [
-      { "name": "Three.js", "logo": "/images/icons/devicons/threejs-original.svg" },
-      { "name": "After Effects", "logo": "/images/icons/devicons/aftereffects-plain.svg" },
-      { "name": "Premiere Pro", "logo": "/images/icons/devicons/premierepro-plain.svg" },
-      { "name": "Photoshop", "logo": "/images/icons/devicons/photoshop-original.svg" }
-    ]
-  },
-  {
-    "title": "Platforms & Publishing",
-    "skills": [
-      { "name": "WordPress", "logo": "/images/icons/devicons/wordpress-original.svg" },
-      { "name": "Drupal", "logo": "/images/icons/devicons/drupal-original-wordmark.svg" },
-      { "name": "Hugo", "logo": "/images/icons/devicons/hugo-original-wordmark.svg" },
-      { "name": "AWS", "logo": "/images/icons/devicons/amazonwebservices-original-wordmark.svg" }
-    ]
-  },
-  {
-    "title": "Dev & Workflow Tools",
-    "skills": [
-      { "name": "Git", "logo": "/images/icons/devicons/git-original-wordmark.svg" },
+      { "name": "MySQL", "logo": "/images/icons/devicons/mysql-original.svg" },
+      { "name": "VS Code", "logo": "/images/icons/devicons/vscode-original.svg" },
       { "name": "GitHub", "logo": "/images/icons/devicons/github-original.svg" },
-      { "name": "Bash", "logo": "/images/icons/devicons/bash-original.svg" },
       { "name": "Markdown", "logo": "/images/icons/devicons/markdown-original.svg" }
     ]
   },
   {
-    "title": "Data & Infrastructure",
+    "title": "Redes & Infraestructura",
+    "skills": [
+      { "name": "AWS", "logo": "/images/icons/devicons/amazonwebservices-original-wordmark.svg" },
+      { "name": "TypeScript", "logo": "/images/icons/devicons/typescript-original.svg" },
+      { "name": "React", "logo": "/images/icons/devicons/react-original.svg" }
+    ]
+  },
+  {
+    "title": "Diseño & Marketing Digital",
+    "skills": [
+      { "name": "Figma", "logo": "/images/icons/devicons/figma-original.svg" },
+      { "name": "Photoshop", "logo": "/images/icons/devicons/photoshop-line.svg" },
+      { "name": "After Effects", "logo": "/images/icons/devicons/aftereffects-plain.svg" },
+      { "name": "Illustrator", "logo": "/images/icons/devicons/illustrator-line.svg" }
+    ]
+  },
+  {
+    "title": "Office & Productividad",
     "skills": [
       { "name": "SQLite", "logo": "/images/icons/devicons/sqlite-original-wordmark.svg" },
-      { "name": "Nginx", "logo": "/images/icons/devicons/nginx-original.svg" },
-      { "name": "Docker", "logo": "/images/icons/devicons/docker-original-wordmark.svg" },
-      { "name": "Prometheus", "logo": "/images/icons/devicons/prometheus-original-wordmark.svg" }
+      { "name": "Blender", "logo": "/images/icons/devicons/blender-original.svg" }
     ]
   }
 ]

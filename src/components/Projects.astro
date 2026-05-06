@@ -17,13 +17,13 @@ import { icons } from '../lib/icons';
 
 // Filter values must match the `category` field used in projects.json entries.
 const filters = [
-  { label: 'Featured', value: 'featured' },
-  { label: 'All', value: 'all' },
-  { label: 'Infrastructure', value: 'infrastructure' },
+  { label: 'Destacados', value: 'featured' },
+  { label: 'Todos', value: 'all' },
+  { label: 'Infraestructura', value: 'infrastructure' },
   { label: 'DevOps', value: 'devops' },
-  { label: 'Security', value: 'security' },
+  { label: 'Seguridad', value: 'security' },
   { label: 'Web Dev', value: 'web' },
-  { label: 'Talks', value: 'talks' },
+  { label: 'Charlas', value: 'talks' },
 ];
 
 const projectsJson = JSON.stringify(
@@ -38,8 +38,8 @@ const projectsJson = JSON.stringify(
 <section id="projects" class="py-24 bg-slate-900/30" style="scroll-margin-top: 80px;">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-10 reveal">
-      <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3">My work</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title">Featured Projects</h2>
+      <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3">Mi trabajo</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title">Proyectos Destacados</h2>
     </div>
 
     <div class="flex flex-wrap justify-center gap-2 mb-10 reveal" style="transition-delay:0.1s;">
@@ -138,7 +138,7 @@ const projectsJson = JSON.stringify(
                   </div>
                 )}
                 <span class="view-hint">
-                  <span class="view-hint-text">Click for link to project</span>
+                  <span class="view-hint-text">Click para ver el proyecto</span>
                   <svg
                     class="view-hint-arrow"
                     fill="none"
@@ -161,7 +161,7 @@ const projectsJson = JSON.stringify(
     </div>
 
     <p id="projects-empty" class="hidden text-center text-slate-600 text-sm mt-12">
-      No projects in this category yet.
+      Aún no hay proyectos en esta categoría.
     </p>
   </div>
 </section>
@@ -207,7 +207,7 @@ const projectsJson = JSON.stringify(
             height={18}
             class="modal-link-icon"
           />
-          <span id="modal-link-text">View Project</span>
+          <span id="modal-link-text">Ver Proyecto</span>
           <svg class="modal-cta-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path
               stroke-linecap="round"
@@ -217,7 +217,7 @@ const projectsJson = JSON.stringify(
             ></path>
           </svg>
         </a>
-        <p id="modal-no-link" class="modal-no-link hidden">Private / No public link available.</p>
+        <p id="modal-no-link" class="modal-no-link hidden">Privado / Sin enlace público disponible.</p>
       </div>
     </div>
   </div>
@@ -334,10 +334,10 @@ const projectsJson = JSON.stringify(
 
     if (p.link) {
       modalLink.href = p.link;
-      if (p.link.includes('github.com')) modalLinkTx.textContent = 'View on GitHub';
-      else if (p.link.includes('gitlab')) modalLinkTx.textContent = 'View on GitLab';
-      else if (p.link.includes('blog')) modalLinkTx.textContent = 'Read the Post';
-      else modalLinkTx.textContent = 'View Project';
+      if (p.link.includes('github.com')) modalLinkTx.textContent = 'Ver en GitHub';
+      else if (p.link.includes('gitlab')) modalLinkTx.textContent = 'Ver en GitLab';
+      else if (p.link.includes('blog')) modalLinkTx.textContent = 'Leer el artículo';
+      else modalLinkTx.textContent = 'Ver Proyecto';
       modalLink.classList.remove('hidden');
       modalNoLink.classList.add('hidden');
     } else {
