@@ -82,6 +82,11 @@ function cardModClass(type: CertType) {
                       <span class="ip-pulse" />
                       Estudiando activamente
                     </span>
+                  ) : (cert as any).activeLabel ? (
+                    <span class="in-progress-label" style="color: #f59e0b;">
+                      <span class="ip-pulse" style="background:#f59e0b;" />
+                      {(cert as any).activeLabel}
+                    </span>
                   ) : cert.credentialUrl ? (
                     <a
                       href={cert.credentialUrl}

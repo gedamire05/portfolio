@@ -13,8 +13,9 @@ import { icons } from '../lib/icons';
 import { withBase } from '../lib/assetPath';
 
 const augmented = await augmentProjectsWithImages(projectsData as ProjectEntry[]);
-// Only projects with a GitHub-fetched preview image appear in the hero slider.
-const featuredProjects = augmented.filter((p) => p.featuredImage);
+const featuredProjects = augmented
+  .filter((p) => (p as any).featured && (p.featuredImage || (p as any).sliderImage))
+  .sort((a, b) => ((a as any).sliderOrder ?? 99) - ((b as any).sliderOrder ?? 99));
 // Split "Frontend & Backend" so the "&" can be styled with a different colour in the template.
 const heroParts = personalData.heroRole.split(' & ');
 ---
@@ -180,7 +181,7 @@ const heroParts = personalData.heroRole.split(' & ');
                       }
                     >
                       <img
-                        src={withBase(project.featuredImage!)}
+                        src={withBase(project.featuredImage ?? (project as any).sliderImage)}
                         alt={project.title}
                         class="w-full h-full object-cover"
                         loading="lazy"

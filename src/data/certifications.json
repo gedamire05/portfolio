@@ -1,7 +1,7 @@
 [
   {
     "name": "ASIR Grado Superior — Administración de Sistemas Informáticos en Red",
-    "issuer": "Institut Nicolau Copèrnic · Terrassa",
+    "issuer": "Vedruna Vall · Terrassa",
     "date": "2024 – Presente",
     "status": "En Curso",
     "type": "in-progress",
@@ -21,8 +21,9 @@
     "name": "Prácticas Profesionales — Técnico Informático",
     "issuer": "Sosinformatics · Barcelona",
     "date": "2024 – Actualidad",
-    "status": "En Curso",
-    "type": "in-progress",
+    "status": "Experiencia Profesional",
+    "type": "professional-development",
+    "activeLabel": "Trabajando actualmente",
     "description": "Experiencia real en soporte IT, configuración de redes UniFi, administración de NAS, instalación de cableado Ethernet y proyectos de infraestructura para clientes empresariales.",
     "credentialUrl": ""
   },
@@ -30,8 +31,8 @@
     "name": "Diseñador Web & Técnico de Sistemas",
     "issuer": "Samiprimors · Terrassa",
     "date": "Sep 2023 – Feb 2024",
-    "status": "Completado",
-    "type": "certification",
+    "status": "Experiencia Profesional",
+    "type": "professional-development",
     "description": "Experiencia profesional en soporte técnico, diseño web con WordPress, HTML y CSS, optimización SEO, marketing digital, seguridad informática y gestión de contenido web.",
     "credentialUrl": ""
   },

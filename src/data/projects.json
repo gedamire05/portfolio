@@ -48,6 +48,22 @@
     "githubRepo": ""
   },
   {
+    "title": "SecureScan — NetSecure Auditor",
+    "featured": true,
+    "resume": true,
+    "company": "Proyecto Personal · ASIR",
+    "category": "security",
+    "description": "Herramienta de auditoría de seguridad desarrollada en Python (~900 líneas, 20 módulos) que automatiza pentests sobre redes. Detecta contraseñas débiles, servicios mal configurados, CVEs y cabeceras HTTP ausentes. Genera informes en PDF, HTML, JSON y CSV. Validada en laboratorio virtualizado con pfSense, Kali Linux y servidor Ubuntu vulnerable — tasa de detección del 100%.",
+    "tags": ["Python", "Nmap", "Hydra", "pfSense", "Kali Linux", "VirtualBox", "Ciberseguridad", "ELK Stack"],
+    "icon": "shield-check",
+    "sliderImage": "/images/projects/securescan.jpg",
+    "sliderOrder": 4,
+    "backgroundImage": "/images/projects/securescan.jpg",
+    "link": "",
+    "colorIcon": "/images/icons/materialdesign/cube-outline.svg",
+    "githubRepo": ""
+  },
+  {
     "title": "Portfolio Personal",
     "resume": true,
     "company": "Proyecto Personal",
