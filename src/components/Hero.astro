@@ -86,7 +86,7 @@ const heroParts = personalData.heroRole.split(' & ');
           <a href="#contact" class="btn-primary text-center">Contáctame</a>
           {personalData.cv ? (
             <a
-              href={personalData.cv}
+              href={withBase(personalData.cv)}
               target="_blank"
               rel="noopener noreferrer"
               class="btn-secondary text-center">Descargar CV</a>
