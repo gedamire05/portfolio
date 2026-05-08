@@ -117,9 +117,9 @@ const checkIcon = (color: string) =>
 
   <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
     <div class="text-center mb-14 reveal">
-      <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3">Experiencia Real</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title">Empresas & Clientes</h2>
-      <p class="mt-4 text-base max-w-xl mx-auto" style="color: var(--text-muted);">
+      <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3" data-en="Real Experience">Experiencia Real</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title" data-en="Companies & Clients">Empresas & Clientes</h2>
+      <p class="mt-4 text-base max-w-xl mx-auto" style="color: var(--text-muted);" data-en="Companies where I have worked and developed real IT projects.">
         Empresas donde he trabajado y desarrollado proyectos reales de IT.
       </p>
     </div>
@@ -147,7 +147,7 @@ const checkIcon = (color: string) =>
             </div>
 
             <div class="site-content">
-              <div class="site-badge" style={`--badge-color: ${siteA.badgeColor};`}>
+              <div class="site-badge" style={`--badge-color: ${siteA.badgeColor};`} data-en={(siteA as any).badge_en}>
                 {siteA.badge}
               </div>
               <h3 class="site-title">
@@ -155,11 +155,11 @@ const checkIcon = (color: string) =>
                   {siteA.name}
                 </a>
               </h3>
-              <p class="site-desc">{siteA.description}</p>
+              <p class="site-desc" data-en={(siteA as any).description_en}>{siteA.description}</p>
 
               <ul class="site-features">
-                {siteA.features.map((f) => (
-                  <li>
+                {siteA.features.map((f, fi) => (
+                  <li data-en={(siteA as any).features_en?.[fi]}>
                     <svg
                       viewBox="0 0 16 16"
                       fill="none"
@@ -177,6 +177,7 @@ const checkIcon = (color: string) =>
                 rel="noopener"
                 class="site-cta"
                 style={`--cta-color: ${siteA.cardAccent};`}
+                data-en={(siteA as any).ctaText_en}
               >
                 {siteA.ctaText}
                 <svg viewBox="0 0 20 20" fill="none" class="site-cta-arrow">
@@ -231,7 +232,7 @@ const checkIcon = (color: string) =>
             </div>
 
             <div class="site-content">
-              <div class="site-badge" style={`--badge-color: ${siteB.badgeColor};`}>
+              <div class="site-badge" style={`--badge-color: ${siteB.badgeColor};`} data-en={(siteB as any).badge_en}>
                 {siteB.badge}
               </div>
               <h3 class="site-title">
@@ -239,11 +240,11 @@ const checkIcon = (color: string) =>
                   {siteB.name}
                 </a>
               </h3>
-              <p class="site-desc">{siteB.description}</p>
+              <p class="site-desc" data-en={(siteB as any).description_en}>{siteB.description}</p>
 
               <ul class="site-features">
-                {siteB.features.map((f) => (
-                  <li>
+                {siteB.features.map((f, fi) => (
+                  <li data-en={(siteB as any).features_en?.[fi]}>
                     <svg
                       viewBox="0 0 16 16"
                       fill="none"
@@ -261,6 +262,7 @@ const checkIcon = (color: string) =>
                 rel="noopener"
                 class="site-cta"
                 style={`--cta-color: ${siteB.cardAccent};`}
+                data-en={(siteB as any).ctaText_en}
               >
                 {siteB.ctaText}
                 <svg viewBox="0 0 20 20" fill="none" class="site-cta-arrow">

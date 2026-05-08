@@ -113,6 +113,15 @@ const { title = siteData.title, description = siteData.description } = Astro.pro
         } catch {}
       })();
     </script>
+    <!-- Apply saved language before first paint to avoid a flash of Spanish text on EN preference -->
+    <script is:inline>
+      (function () {
+        try {
+          var lang = localStorage.getItem('portfolio-lang') || 'es';
+          if (lang === 'en') document.documentElement.setAttribute('data-lang', 'en');
+        } catch {}
+      })();
+    </script>
     <!-- Adds .page-hidden to <body> while the tab is not visible.
          Components can use this class to pause expensive animations. -->
     <script is:inline>

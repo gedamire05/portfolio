@@ -1,6 +1,7 @@
 [
   {
     "title": "Soporte IT & Sistemas",
+    "title_en": "IT Support & Systems",
     "skills": [
       { "name": "Linux", "logo": "/images/icons/devicons/linux-plain.svg" },
       { "name": "Bash", "logo": "/images/icons/devicons/bash-original.svg" },
@@ -11,6 +12,7 @@
   },
   {
     "title": "Web & Desarrollo",
+    "title_en": "Web & Development",
     "skills": [
       { "name": "HTML5", "logo": "/images/icons/devicons/html5-original.svg" },
       { "name": "CSS3", "logo": "/images/icons/devicons/css3-original.svg" },
@@ -20,6 +22,7 @@
   },
   {
     "title": "Bases de Datos & Herramientas",
+    "title_en": "Databases & Tools",
     "skills": [
       { "name": "MySQL", "logo": "/images/icons/devicons/mysql-original.svg" },
       { "name": "VS Code", "logo": "/images/icons/devicons/vscode-original.svg" },
@@ -29,6 +32,7 @@
   },
   {
     "title": "Redes & Infraestructura",
+    "title_en": "Networks & Infrastructure",
     "skills": [
       { "name": "AWS", "logo": "/images/icons/devicons/amazonwebservices-original-wordmark.svg" },
       { "name": "TypeScript", "logo": "/images/icons/devicons/typescript-original.svg" },
@@ -37,6 +41,7 @@
   },
   {
     "title": "Diseño & Marketing Digital",
+    "title_en": "Design & Digital Marketing",
     "skills": [
       { "name": "Figma", "logo": "/images/icons/devicons/figma-original.svg" },
       { "name": "Photoshop", "logo": "/images/icons/devicons/photoshop-line.svg" },
@@ -46,6 +51,7 @@
   },
   {
     "title": "Office & Productividad",
+    "title_en": "Office & Productivity",
     "skills": [
       { "name": "SQLite", "logo": "/images/icons/devicons/sqlite-original-wordmark.svg" },
       { "name": "Blender", "logo": "/images/icons/devicons/blender-original.svg" }

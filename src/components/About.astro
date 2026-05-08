@@ -6,14 +6,14 @@ import personalData from '../data/personal.json';
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-12 reveal">
-        <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3">
+        <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3" data-en="Get to know me">
           Conóceme
         </p>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-0 section-title">Sobre Mí</h2>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold mb-0 section-title" data-en="About Me">Sobre Mí</h2>
       </div>
 
       <div class="card reveal" style="transition-delay: 0.15s;">
-        <p class="text-lg text-slate-300 leading-relaxed">
+        <p class="text-lg text-slate-300 leading-relaxed" data-en={personalData.aboutLong_en}>
           {personalData.aboutLong}
         </p>
 
@@ -40,8 +40,8 @@ import personalData from '../data/personal.json';
               </svg>
             </div>
             <div>
-              <h3 class="text-white font-semibold mb-1">Rol</h3>
-              <p class="text-slate-400 text-sm">{personalData.title}</p>
+              <h3 class="text-white font-semibold mb-1" data-en="Role">Rol</h3>
+              <p class="text-slate-400 text-sm" data-en={personalData.title_en}>{personalData.title}</p>
             </div>
           </div>
 
@@ -70,7 +70,7 @@ import personalData from '../data/personal.json';
               </svg>
             </div>
             <div>
-              <h3 class="text-white font-semibold mb-1">Ubicación</h3>
+              <h3 class="text-white font-semibold mb-1" data-en="Location">Ubicación</h3>
               <p class="text-slate-400 text-sm">{personalData.location}</p>
             </div>
           </div>
@@ -94,8 +94,8 @@ import personalData from '../data/personal.json';
               </svg>
             </div>
             <div>
-              <h3 class="text-white font-semibold mb-1">Experiencia</h3>
-              <p class="text-slate-400 text-sm">
+              <h3 class="text-white font-semibold mb-1" data-en="Experience">Experiencia</h3>
+              <p class="text-slate-400 text-sm" data-en={`${personalData.yearsExperience} years of experience`}>
                 {personalData.yearsExperience} años de experiencia
               </p>
             </div>
@@ -121,8 +121,8 @@ import personalData from '../data/personal.json';
               </svg>
             </div>
             <div>
-              <h3 class="text-white font-semibold mb-1">Educación</h3>
-              <p class="text-slate-400 text-sm">{personalData.education}</p>
+              <h3 class="text-white font-semibold mb-1" data-en="Education">Educación</h3>
+              <p class="text-slate-400 text-sm" data-en={personalData.education_en}>{personalData.education}</p>
             </div>
           </div>
 

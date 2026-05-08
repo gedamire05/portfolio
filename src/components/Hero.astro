@@ -51,17 +51,17 @@ const heroParts = personalData.heroRole.split(' & ');
       class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center min-h-screen lg:min-h-0 lg:py-32"
     >
       <div class="order-2 lg:order-1 space-y-6 relative">
-        <p class="text-sm font-semibold tracking-widest text-highlight uppercase reveal">
+        <p class="text-sm font-semibold tracking-widest text-highlight uppercase reveal" data-en="Welcome to my portfolio">
           Bienvenido a mi portfolio
         </p>
 
         <div class="reveal text-backdrop" style="transition-delay: 0.1s;">
           <h1 class="font-bold leading-tight" style="font-size: clamp(2.5rem, 5vw, 4.5rem);">
-            Hola, soy<br />
+            <span data-en="Hi, I'm">Hola, soy</span><br />
             <span class="gradient-text">{personalData.name}</span>
           </h1>
 
-          <h2 class="text-slate-400 font-light mt-3" style="font-size: clamp(1rem, 2.2vw, 1.5rem);">
+          <h2 class="text-slate-400 font-light mt-3" style="font-size: clamp(1rem, 2.2vw, 1.5rem);" data-en={personalData.heroRole_en}>
             {
               heroParts.length > 1 ? (
                 <>
@@ -78,20 +78,22 @@ const heroParts = personalData.heroRole.split(' & ');
         <p
           class="text-base text-slate-400 max-w-lg leading-relaxed reveal text-backdrop"
           style="transition-delay: 0.2s;"
+          data-en={personalData.bio_en}
         >
           {personalData.bio}
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 reveal" style="transition-delay: 0.3s;">
-          <a href="#contact" class="btn-primary text-center">Contáctame</a>
+          <a href="#contact" class="btn-primary text-center" data-en="Contact me">Contáctame</a>
           {personalData.cv ? (
             <a
               href={withBase(personalData.cv)}
               target="_blank"
               rel="noopener noreferrer"
-              class="btn-secondary text-center">Descargar CV</a>
+              class="btn-secondary text-center"
+              data-en="Download CV">Descargar CV</a>
           ) : (
-            <button onclick="window.print()" class="btn-secondary text-center">Imprimir CV</button>
+            <button onclick="window.print()" class="btn-secondary text-center" data-en="Print CV">Imprimir CV</button>
           )}
         </div>
 
@@ -135,7 +137,7 @@ const heroParts = personalData.heroRole.split(' & ');
         >
           <article class="project-frame" id="project-frame">
             <div class="pf-header" id="project-frame-header">
-              <h2 class="pf-title">Proyectos Destacados</h2>
+              <h2 class="pf-title" data-en="Featured Projects">Proyectos Destacados</h2>
               <div class="pf-btn-group">
                 <button
                   type="button"
@@ -190,10 +192,10 @@ const heroParts = personalData.heroRole.split(' & ');
                       />
                       <div class="absolute bottom-3 left-3 right-3 overflow-hidden">
                         <div class="bg-slate-950/85 backdrop-blur-md px-3 py-2 border border-white/5">
-                          <p class="text-white font-bold text-sm truncate font-mono">
+                          <p class="text-white font-bold text-sm truncate font-mono" data-en={(project as any).title_en}>
                             {project.title}
                           </p>
-                          <p style="color: var(--accent);" class="text-xs font-medium truncate">
+                          <p style="color: var(--accent);" class="text-xs font-medium truncate" data-en={(project as any).company_en}>
                             {project.company}
                           </p>
                         </div>

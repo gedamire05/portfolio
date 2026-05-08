@@ -7,9 +7,10 @@
   "themeStorageKey": "portfolio-theme",
   "web3formsKey": "bd605dea-260a-4cba-b895-c2c8813e3d6a",
   "footerAttribution": {
-    "builder": "Built with this open-source template",
+    "builder": "esta plantilla open source",
+    "builder_en": "this open-source template",
     "builderUrl": "https://github.com/gedamire05/portfolio",
-    "host": "Hosted on GitHub",
+    "host": "GitHub Pages",
     "hostUrl": "https://github.com/gedamire05"
   },
   "retroTvCount": 21,
@@ -44,24 +45,28 @@
     {
       "label": "GitHub",
       "desc": "Proyectos y código abierto",
+      "desc_en": "Projects and open source",
       "personalKey": "github",
       "urlTemplate": "https://github.com/{value}"
     },
     {
       "label": "LinkedIn",
       "desc": "Perfil profesional",
+      "desc_en": "Professional profile",
       "personalKey": "linkedin",
       "urlTemplate": "https://linkedin.com/in/{value}"
     },
     {
       "label": "Email",
       "desc": "La mejor forma de contactarme",
+      "desc_en": "Best way to reach me",
       "personalKey": "email",
       "urlTemplate": "mailto:{value}"
     },
     {
       "label": "Phone",
       "desc": "Disponible para llamadas",
+      "desc_en": "Available for calls",
       "personalKey": "phone",
       "urlTemplate": "tel:{value}"
     }
@@ -69,6 +74,7 @@
   "serviceSites": [
     {
       "badge": "Prácticas",
+      "badge_en": "Internship",
       "badgeColor": "#6366f1",
       "cardAccent": "#6366f1",
       "glowColor": "rgba(99, 102, 241, 0.12)",
@@ -78,15 +84,23 @@
       "name": "Sosinformatics",
       "url": "https://www.sosinformatics.com",
       "description": "Empresa de soporte IT e infraestructura donde realizo mis prácticas profesionales. Participación activa en proyectos reales: redes UniFi, NAS, cableado Ethernet e instalaciones empresariales en Barcelona.",
+      "description_en": "IT support and infrastructure company where I carry out my professional internship. Active involvement in real projects: UniFi networks, NAS, Ethernet cabling and business installations in Barcelona.",
       "features": [
         "Soporte Técnico IT & Help Desk",
         "Configuración de Redes UniFi",
         "Administración de Sistemas NAS"
       ],
-      "ctaText": "Ver empresa"
+      "features_en": [
+        "IT Technical Support & Help Desk",
+        "UniFi Network Configuration",
+        "NAS System Administration"
+      ],
+      "ctaText": "Ver empresa",
+      "ctaText_en": "View company"
     },
     {
       "badge": "Experiencia",
+      "badge_en": "Experience",
       "badgeColor": "#10b981",
       "cardAccent": "#10b981",
       "glowColor": "rgba(16, 185, 129, 0.15)",
@@ -96,12 +110,19 @@
       "name": "Samiprimors",
       "url": "",
       "description": "Empresa donde adquirí experiencia en diseño web, soporte técnico, marketing digital y mantenimiento de sistemas. Desarrollo con WordPress, HTML, CSS, SEO y gestión de contenido.",
+      "description_en": "Company where I gained experience in web design, technical support, digital marketing and systems maintenance. Development with WordPress, HTML, CSS, SEO and content management.",
       "features": [
         "Diseño Web & WordPress",
         "Soporte Técnico & Mantenimiento",
         "SEO & Marketing Digital"
       ],
-      "ctaText": "Ver experiencia"
+      "features_en": [
+        "Web Design & WordPress",
+        "Technical Support & Maintenance",
+        "SEO & Digital Marketing"
+      ],
+      "ctaText": "Ver experiencia",
+      "ctaText_en": "View experience"
     }
   ]
 }

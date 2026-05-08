@@ -6,17 +6,17 @@ import { withBase } from '../lib/assetPath';
 <section id="skills" class="py-24" style="scroll-margin-top: 80px;">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-16 reveal">
-      <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3">
+      <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3" data-en="What I work with">
         Con qué trabajo
       </p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title">Herramientas & Habilidades</h2>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title" data-en="Tools & Skills">Herramientas & Habilidades</h2>
     </div>
 
     <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8">
       {
         skillsData.map((category, ci) => (
           <div class="card reveal" style={`transition-delay: ${ci * 0.1}s;`}>
-            <h3 class="text-sm font-bold mb-6 text-accent uppercase tracking-widest">
+            <h3 class="text-sm font-bold mb-6 text-accent uppercase tracking-widest" data-en={(category as any).title_en}>
               {category.title}
             </h3>
 

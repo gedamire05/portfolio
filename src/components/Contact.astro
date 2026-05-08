@@ -14,10 +14,10 @@ const socialLinks = getSocialLinks(personalData as unknown as Record<string, str
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-12 reveal">
-        <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3">
+        <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3" data-en="Get in touch">
           Contáctame
         </p>
-        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title">Hablemos.</h2>
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title" data-en="Let's talk.">Hablemos.</h2>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -73,7 +73,7 @@ const socialLinks = getSocialLinks(personalData as unknown as Record<string, str
                     </svg>
                   </div>
                   <div>
-                    <h3 class="text-white font-semibold text-sm">Teléfono</h3>
+                    <h3 class="text-white font-semibold text-sm" data-en="Phone">Teléfono</h3>
                     <a
                       href={personalData.phoneTel}
                       class="text-slate-400 text-sm hover:text-accent transition-colors"
@@ -111,7 +111,7 @@ const socialLinks = getSocialLinks(personalData as unknown as Record<string, str
                 </svg>
               </div>
               <div>
-                <h3 class="text-white font-semibold text-sm">Ubicación</h3>
+                <h3 class="text-white font-semibold text-sm" data-en="Location">Ubicación</h3>
                 <p class="text-slate-400 text-sm">{personalData.location}</p>
               </div>
             </div>
@@ -120,7 +120,7 @@ const socialLinks = getSocialLinks(personalData as unknown as Record<string, str
           {
             socialLinks.length > 0 && (
               <div class="card">
-                <h3 class="text-white font-semibold text-sm mb-4">También puedes encontrarme en:</h3>
+                <h3 class="text-white font-semibold text-sm mb-4" data-en="You can also find me at:">También puedes encontrarme en:</h3>
                 <div class="flex flex-wrap gap-4">
                   {socialLinks.map((link) => (
                     <a
@@ -156,6 +156,7 @@ const socialLinks = getSocialLinks(personalData as unknown as Record<string, str
                 <label
                   for="name"
                   class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2"
+                  data-en="Name"
                   >Nombre</label
                 >
                 <input
@@ -166,6 +167,7 @@ const socialLinks = getSocialLinks(personalData as unknown as Record<string, str
                   required
                   class="w-full bg-slate-900/60 border border-slate-700/60 rounded-lg px-4 py-3 text-white text-sm focus:outline-hidden focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent/50 transition-colors placeholder:text-slate-600"
                   placeholder="Mi nombre…"
+                  data-placeholder-en="Your name…"
                 />
               </div>
               <div>
@@ -192,6 +194,7 @@ const socialLinks = getSocialLinks(personalData as unknown as Record<string, str
               <label
                 for="subject"
                 class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2"
+                data-en="Subject"
                 >Asunto</label
               >
               <input
@@ -202,6 +205,7 @@ const socialLinks = getSocialLinks(personalData as unknown as Record<string, str
                 required
                 class="w-full bg-slate-900/60 border border-slate-700/60 rounded-lg px-4 py-3 text-white text-sm focus:outline-hidden focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent/50 transition-colors placeholder:text-slate-600"
                 placeholder="Cuéntanos el asunto…"
+                data-placeholder-en="Tell us the subject…"
               />
             </div>
 
@@ -209,6 +213,7 @@ const socialLinks = getSocialLinks(personalData as unknown as Record<string, str
               <label
                 for="message"
                 class="block text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2"
+                data-en="Message"
                 >Mensaje</label
               >
               <textarea
@@ -217,11 +222,12 @@ const socialLinks = getSocialLinks(personalData as unknown as Record<string, str
                 rows="5"
                 required
                 class="w-full bg-slate-900/60 border border-slate-700/60 rounded-lg px-4 py-3 text-white text-sm focus:outline-hidden focus-visible:border-accent focus-visible:ring-1 focus-visible:ring-accent/50 transition-colors resize-none placeholder:text-slate-600"
-                placeholder="¿Qué nos quieres contar?"></textarea>
+                placeholder="¿Qué nos quieres contar?"
+                data-placeholder-en="What would you like to tell us?"></textarea>
             </div>
 
             <div aria-live="polite" aria-atomic="true" id="form-status" class="sr-only"></div>
-            <button type="submit" class="btn-primary w-full flex items-center justify-center gap-2">
+            <button type="submit" class="btn-primary w-full flex items-center justify-center gap-2" data-en="Send Message">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="send-icon w-4 h-4"
@@ -278,7 +284,7 @@ const socialLinks = getSocialLinks(personalData as unknown as Record<string, str
     e.preventDefault();
     if (button) {
       button.disabled = true;
-      button.textContent = 'Enviando…';
+      button.textContent = document.documentElement.getAttribute('data-lang') === 'en' ? 'Sending…' : 'Enviando…';
     }
     setStatus('', false);
 
@@ -288,14 +294,15 @@ const socialLinks = getSocialLinks(personalData as unknown as Record<string, str
         body: new FormData(form!),
       });
       const data = (await res.json()) as { success?: boolean; message?: string };
+      const isEn = document.documentElement.getAttribute('data-lang') === 'en';
       if (res.ok) {
-        setStatus("¡Mensaje enviado! Me pondré en contacto pronto.", false);
+        setStatus(isEn ? 'Message sent! I will get back to you soon.' : '¡Mensaje enviado! Me pondré en contacto pronto.', false);
         form!.reset();
       } else {
-        setStatus(data.message ?? 'Algo salió mal. Por favor, inténtalo de nuevo.', true);
+        setStatus(data.message ?? (isEn ? 'Something went wrong. Please try again.' : 'Algo salió mal. Por favor, inténtalo de nuevo.'), true);
       }
     } catch {
-      setStatus('Error de red. Comprueba tu conexión e inténtalo de nuevo.', true);
+      setStatus(isEn ? 'Network error. Check your connection and try again.' : 'Error de red. Comprueba tu conexión e inténtalo de nuevo.', true);
     } finally {
       if (button) {
         button.disabled = false;

@@ -9,7 +9,7 @@ const base = import.meta.env.BASE_URL;
 
 const socialLinks = getSocialLinks(personalData as unknown as Record<string, string | string[]>);
 
-const navLinks = menuData.sections.map((s) => ({ label: s.label, href: s.href }));
+const navLinks = menuData.sections.map((s) => ({ label: s.label, label_en: s.label_en, href: s.href }));
 
 const { footerAttribution } = siteData;
 ---
@@ -29,7 +29,7 @@ const { footerAttribution } = siteData;
 
         <div class="mt-4">
           <p class="text-lg font-bold gradient-text">{personalData.name}</p>
-          <p class="text-slate-500 text-xs mt-1 leading-relaxed max-w-[220px]">
+          <p class="text-slate-500 text-xs mt-1 leading-relaxed max-w-[220px]" data-en="IT Support · Systems & Networks · Web Development">
             {siteData.tagline}
           </p>
           <a href={`mailto:${personalData.email}`} class="footer-email mt-3">
@@ -55,7 +55,7 @@ const { footerAttribution } = siteData;
         <nav class="flex flex-col gap-2" aria-label="Footer navigation">
           {
             navLinks.map((link) => (
-              <a href={link.href} class="footer-nav-link">
+              <a href={link.href} class="footer-nav-link" data-en={link.label_en}>
                 {link.label}
               </a>
             ))
@@ -79,8 +79,8 @@ const { footerAttribution } = siteData;
           footerAttribution.builder && (
             <>
               {' '}
-              · Hecho con{' '}
-              <a href={footerAttribution.builderUrl} target="_blank">
+              · <span data-en="Built with">Hecho con</span>{' '}
+              <a href={footerAttribution.builderUrl} target="_blank" data-en={(footerAttribution as any).builder_en}>
                 {footerAttribution.builder}
               </a>
             </>
@@ -90,15 +90,15 @@ const { footerAttribution } = siteData;
           footerAttribution.host && (
             <>
               {' '}
-              / Alojado en{' '}
+              / <span data-en="Hosted on">Alojado en</span>{' '}
               <a href={footerAttribution.hostUrl} target="_blank">
                 {footerAttribution.host}
               </a>
             </>
           )
         }
-        &nbsp;·&nbsp;<a href="privacy" class="hover:text-accent transition-colors">Privacidad</a
-        >&nbsp;·&nbsp;<a href="terms" class="hover:text-accent transition-colors">Términos</a>
+        &nbsp;·&nbsp;<a href="privacy" class="hover:text-accent transition-colors" data-en="Privacy">Privacidad</a
+        >&nbsp;·&nbsp;<a href="terms" class="hover:text-accent transition-colors" data-en="Terms">Términos</a>
       </p>
       <div class="flex items-center gap-5">
         {

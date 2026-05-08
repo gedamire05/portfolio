@@ -1,48 +1,64 @@
 [
   {
     "name": "ASIR Grado Superior — Administración de Sistemas Informáticos en Red",
+    "name_en": "ASIR Higher Degree — IT Systems and Network Administration",
     "issuer": "Vedruna Vall · Terrassa",
     "date": "2024 – Presente",
+    "date_en": "2024 – Present",
     "status": "En Curso",
     "type": "in-progress",
     "description": "Formación avanzada en administración de sistemas, redes, virtualización, seguridad informática y gestión de infraestructura IT en entornos empresariales.",
+    "description_en": "Advanced training in systems administration, networks, virtualization, IT security and infrastructure management in enterprise environments.",
     "credentialUrl": ""
   },
   {
     "name": "ASIR Grado Medio — Sistemas Microinformáticos y Redes",
+    "name_en": "ASIR Mid Degree — Microcomputer Systems and Networks",
     "issuer": "Institut Nicolau Copèrnic · Terrassa",
     "date": "2022 – 2024",
+    "date_en": "2022 – 2024",
     "status": "Completado",
     "type": "certification",
     "description": "Formación técnica en mantenimiento de equipos, instalación de sistemas operativos, redes locales, soporte técnico y resolución de incidencias hardware y software.",
+    "description_en": "Technical training in equipment maintenance, operating system installation, local networks, technical support and hardware/software incident resolution.",
     "credentialUrl": ""
   },
   {
     "name": "Prácticas Profesionales — Técnico Informático",
+    "name_en": "Professional Internship — IT Technician",
     "issuer": "Sosinformatics · Barcelona",
     "date": "2024 – Actualidad",
+    "date_en": "2024 – Present",
     "status": "Experiencia Profesional",
     "type": "professional-development",
     "activeLabel": "Trabajando actualmente",
+    "activeLabel_en": "Currently working",
     "description": "Experiencia real en soporte IT, configuración de redes UniFi, administración de NAS, instalación de cableado Ethernet y proyectos de infraestructura para clientes empresariales.",
+    "description_en": "Real experience in IT support, UniFi network configuration, NAS administration, Ethernet cabling installation and infrastructure projects for business clients.",
     "credentialUrl": ""
   },
   {
     "name": "Diseñador Web & Técnico de Sistemas",
+    "name_en": "Web Designer & Systems Technician",
     "issuer": "Samiprimors · Terrassa",
     "date": "Sep 2023 – Feb 2024",
+    "date_en": "Sep 2023 – Feb 2024",
     "status": "Experiencia Profesional",
     "type": "professional-development",
     "description": "Experiencia profesional en soporte técnico, diseño web con WordPress, HTML y CSS, optimización SEO, marketing digital, seguridad informática y gestión de contenido web.",
+    "description_en": "Professional experience in technical support, web design with WordPress, HTML and CSS, SEO optimization, digital marketing, IT security and web content management.",
     "credentialUrl": ""
   },
   {
     "name": "Educación Secundaria Obligatoria (ESO)",
+    "name_en": "Compulsory Secondary Education (ESO)",
     "issuer": "Vedruna Vall · Terrassa",
     "date": "2018 – 2022",
+    "date_en": "2018 – 2022",
     "status": "Completado",
     "type": "certification",
     "description": "Formación secundaria completa con base en ciencias y tecnología.",
+    "description_en": "Complete secondary education with a foundation in science and technology.",
     "credentialUrl": ""
   }
 ]

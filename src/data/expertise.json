@@ -2,21 +2,29 @@
   {
     "key": "sysadmin",
     "title": "Soporte IT & Help Desk",
-    "description": "Resolución de incidencias hardware y software, diagnóstico y troubleshooting, soporte técnico a usuarios y clientes. Experiencia en entornos reales con mantenimiento y reparación de equipos informáticos."
+    "title_en": "IT Support & Help Desk",
+    "description": "Resolución de incidencias hardware y software, diagnóstico y troubleshooting, soporte técnico a usuarios y clientes. Experiencia en entornos reales con mantenimiento y reparación de equipos informáticos.",
+    "description_en": "Hardware and software incident resolution, diagnostics and troubleshooting, technical support for users and clients. Real-world experience in equipment maintenance and repair."
   },
   {
     "key": "networks",
     "title": "Redes & Infraestructura",
-    "description": "Configuración de redes empresariales UniFi, instalación de cableado Ethernet, configuración y gestión de sistemas NAS, firewall y seguridad informática. Experiencia práctica en instalaciones para clientes reales."
+    "title_en": "Networks & Infrastructure",
+    "description": "Configuración de redes empresariales UniFi, instalación de cableado Ethernet, configuración y gestión de sistemas NAS, firewall y seguridad informática. Experiencia práctica en instalaciones para clientes reales.",
+    "description_en": "UniFi enterprise network configuration, Ethernet cabling installation, NAS system setup and management, firewall and IT security. Hands-on experience in real client deployments."
   },
   {
     "key": "webdev",
     "title": "Desarrollo Web & SEO",
-    "description": "Diseño y mantenimiento de páginas web con WordPress, HTML y CSS. Optimización SEO, diseño responsive, mejora de experiencia de usuario y gestión de contenido web para empresas."
+    "title_en": "Web Development & SEO",
+    "description": "Diseño y mantenimiento de páginas web con WordPress, HTML y CSS. Optimización SEO, diseño responsive, mejora de experiencia de usuario y gestión de contenido web para empresas.",
+    "description_en": "Web design and maintenance with WordPress, HTML and CSS. SEO optimization, responsive design, UX improvements and web content management for businesses."
   },
   {
     "key": "ai",
     "title": "IA & Productividad Digital",
-    "description": "Uso productivo de herramientas de inteligencia artificial (ChatGPT, Claude, Gemini, Veo3) para automatización, generación de contenido y optimización de tareas. Marketing digital, Canva y diseño gráfico."
+    "title_en": "AI & Digital Productivity",
+    "description": "Uso productivo de herramientas de inteligencia artificial (ChatGPT, Claude, Gemini, Veo3) para automatización, generación de contenido y optimización de tareas. Marketing digital, Canva y diseño gráfico.",
+    "description_en": "Productive use of AI tools (ChatGPT, Claude, Gemini, Veo3) for automation, content generation and task optimization. Digital marketing, Canva and graphic design."
   }
 ]

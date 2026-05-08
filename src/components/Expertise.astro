@@ -7,8 +7,8 @@ import servicesData from '../data/expertise.json';
 <section id="expertise" class="py-20" style="scroll-margin-top: 80px;">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-14 reveal">
-      <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3">Lo que hago</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title">Especialidades</h2>
+      <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3" data-en="What I do">Lo que hago</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title" data-en="Expertise">Especialidades</h2>
     </div>
 
     <div class="services-grid max-w-5xl mx-auto">
@@ -201,8 +201,8 @@ import servicesData from '../data/expertise.json';
               </div>
 
               <div class="svc-content">
-                <h3 class="svc-title">{svc.title}</h3>
-                <p class="svc-desc">{svc.description}</p>
+                <h3 class="svc-title" data-en={(svc as any).title_en}>{svc.title}</h3>
+                <p class="svc-desc" data-en={(svc as any).description_en}>{svc.description}</p>
               </div>
             </div>
           </div>

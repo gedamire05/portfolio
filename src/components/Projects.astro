@@ -17,13 +17,13 @@ import { icons } from '../lib/icons';
 
 // Filter values must match the `category` field used in projects.json entries.
 const filters = [
-  { label: 'Destacados', value: 'featured' },
-  { label: 'Todos', value: 'all' },
-  { label: 'Infraestructura', value: 'infrastructure' },
-  { label: 'DevOps', value: 'devops' },
-  { label: 'Seguridad', value: 'security' },
-  { label: 'Web Dev', value: 'web' },
-  { label: 'Charlas', value: 'talks' },
+  { label: 'Destacados', en: 'Featured', value: 'featured' },
+  { label: 'Todos', en: 'All', value: 'all' },
+  { label: 'Infraestructura', en: 'Infrastructure', value: 'infrastructure' },
+  { label: 'DevOps', en: 'DevOps', value: 'devops' },
+  { label: 'Seguridad', en: 'Security', value: 'security' },
+  { label: 'Web Dev', en: 'Web Dev', value: 'web' },
+  { label: 'Charlas', en: 'Talks', value: 'talks' },
 ];
 
 const projectsJson = JSON.stringify(
@@ -38,8 +38,8 @@ const projectsJson = JSON.stringify(
 <section id="projects" class="py-24 bg-slate-900/30" style="scroll-margin-top: 80px;">
   <div class="container mx-auto px-4 sm:px-6 lg:px-8">
     <div class="text-center mb-10 reveal">
-      <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3">Mi trabajo</p>
-      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title">Proyectos Destacados</h2>
+      <p class="text-sm font-semibold tracking-widest text-highlight uppercase mb-3" data-en="My work">Mi trabajo</p>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold section-title" data-en="Featured Projects">Proyectos Destacados</h2>
     </div>
 
     <div class="flex flex-wrap justify-center gap-2 mb-10 reveal" style="transition-delay:0.1s;">
@@ -49,6 +49,8 @@ const projectsJson = JSON.stringify(
             class="filter-btn"
             data-filter={f.value}
             aria-pressed={f.value === 'featured' ? 'true' : 'false'}
+            data-en={f.en}
+            data-label-es={f.label}
           >
             {f.label}
             <span class="filter-count" data-count={f.value} />
@@ -103,20 +105,20 @@ const projectsJson = JSON.stringify(
 
               <div class="p-5 flex flex-col flex-1 relative z-10">
                 <div class="flex items-start justify-between gap-3 mb-3">
-                  <p class="text-xs font-bold text-highlight uppercase tracking-widest leading-tight">
+                  <p class="text-xs font-bold text-highlight uppercase tracking-widest leading-tight" data-en={(project as any).company_en}>
                     {project.company}
                   </p>
                 </div>
 
-                <h3 class="project-title text-lg font-bold mb-2 leading-snug">{project.title}</h3>
+                <h3 class="project-title text-lg font-bold mb-2 leading-snug" data-en={(project as any).title_en}>{project.title}</h3>
 
-                <p class="card-desc text-slate-400 text-sm leading-relaxed flex-1 mb-4">
+                <p class="card-desc text-slate-400 text-sm leading-relaxed flex-1 mb-4" data-en={(project as any).description_en}>
                   {project.description}
                 </p>
 
                 <div class="flex flex-wrap gap-1.5">
-                  {project.tags.map((tag) => (
-                    <span class="tag">{tag}</span>
+                  {project.tags.map((tag, ti) => (
+                    <span class="tag" data-en={(project as any).tags_en?.[ti]}>{tag}</span>
                   ))}
                 </div>
               </div>
@@ -138,7 +140,7 @@ const projectsJson = JSON.stringify(
                   </div>
                 )}
                 <span class="view-hint">
-                  <span class="view-hint-text">Click para ver el proyecto</span>
+                  <span class="view-hint-text" data-en="Click to view project">Click para ver el proyecto</span>
                   <svg
                     class="view-hint-arrow"
                     fill="none"
@@ -160,7 +162,7 @@ const projectsJson = JSON.stringify(
       }
     </div>
 
-    <p id="projects-empty" class="hidden text-center text-slate-600 text-sm mt-12">
+    <p id="projects-empty" class="hidden text-center text-slate-600 text-sm mt-12" data-en="No projects in this category yet.">
       Aún no hay proyectos en esta categoría.
     </p>
   </div>
@@ -217,7 +219,7 @@ const projectsJson = JSON.stringify(
             ></path>
           </svg>
         </a>
-        <p id="modal-no-link" class="modal-no-link hidden">Privado / Sin enlace público disponible.</p>
+        <p id="modal-no-link" class="modal-no-link hidden" data-en="Private / No public link available.">Privado / Sin enlace público disponible.</p>
       </div>
     </div>
   </div>
@@ -319,13 +321,15 @@ const projectsJson = JSON.stringify(
       modalHero.style.display = 'none';
     }
 
+    const isEn = document.documentElement.getAttribute('data-lang') === 'en';
     modalCat.textContent = p.category;
-    modalTitle.textContent = p.title;
-    modalCo.textContent = p.company;
-    modalDesc.textContent = p.description;
+    modalTitle.textContent = (isEn && p.title_en) ? p.title_en : p.title;
+    modalCo.textContent = (isEn && p.company_en) ? p.company_en : p.company;
+    modalDesc.textContent = (isEn && p.description_en) ? p.description_en : p.description;
 
     modalTags.innerHTML = '';
-    for (const t of p.tags) {
+    const tagsToShow = (isEn && p.tags_en) ? p.tags_en : p.tags;
+    for (const t of tagsToShow) {
       const span = document.createElement('span');
       span.className = 'tag';
       span.textContent = t;
@@ -334,10 +338,11 @@ const projectsJson = JSON.stringify(
 
     if (p.link) {
       modalLink.href = p.link;
-      if (p.link.includes('github.com')) modalLinkTx.textContent = 'Ver en GitHub';
-      else if (p.link.includes('gitlab')) modalLinkTx.textContent = 'Ver en GitLab';
-      else if (p.link.includes('blog')) modalLinkTx.textContent = 'Leer el artículo';
-      else modalLinkTx.textContent = 'Ver Proyecto';
+      const isEn = document.documentElement.getAttribute('data-lang') === 'en';
+      if (p.link.includes('github.com')) modalLinkTx.textContent = isEn ? 'View on GitHub' : 'Ver en GitHub';
+      else if (p.link.includes('gitlab')) modalLinkTx.textContent = isEn ? 'View on GitLab' : 'Ver en GitLab';
+      else if (p.link.includes('blog')) modalLinkTx.textContent = isEn ? 'Read article' : 'Leer el artículo';
+      else modalLinkTx.textContent = isEn ? 'View Project' : 'Ver Proyecto';
       modalLink.classList.remove('hidden');
       modalNoLink.classList.add('hidden');
     } else {

@@ -2,45 +2,66 @@
   "sections": [
     {
       "label": "Sobre Mí",
+      "label_en": "About Me",
       "shortLabel": "Sobre Mí",
+      "shortLabel_en": "About",
       "href": "#about",
-      "desc": "Mi trayectoria y experiencia"
+      "desc": "Mi trayectoria y experiencia",
+      "desc_en": "My background and experience"
     },
     {
       "label": "Especialidades",
+      "label_en": "Expertise",
       "shortLabel": "Especialidades",
+      "shortLabel_en": "Expertise",
       "href": "#expertise",
-      "desc": "En qué me especializo y cómo trabajo"
+      "desc": "En qué me especializo y cómo trabajo",
+      "desc_en": "What I specialise in and how I work"
     },
     {
       "label": "Habilidades",
+      "label_en": "Skills",
       "shortLabel": "Habilidades",
+      "shortLabel_en": "Skills",
       "href": "#skills",
-      "desc": "Herramientas y tecnologías que uso"
+      "desc": "Herramientas y tecnologías que uso",
+      "desc_en": "Tools and technologies I use"
     },
     {
       "label": "Proyectos",
+      "label_en": "Projects",
       "shortLabel": "Proyectos",
+      "shortLabel_en": "Projects",
       "href": "#projects",
-      "desc": "Proyectos técnicos destacados"
+      "desc": "Proyectos técnicos destacados",
+      "desc_en": "Featured technical projects"
     },
     {
       "label": "Exp. y Formación",
+      "label_en": "Education & Exp.",
       "shortLabel": "Formación",
+      "shortLabel_en": "Education",
       "href": "#certifications",
-      "desc": "Estudios y experiencia profesional"
+      "desc": "Estudios y experiencia profesional",
+      "desc_en": "Studies and professional experience"
     },
     {
       "label": "Servicios",
+      "label_en": "Services",
       "shortLabel": "Servicios",
+      "shortLabel_en": "Services",
       "href": "#services",
-      "desc": "Empresas y proyectos donde trabajo"
+      "desc": "Empresas y proyectos donde trabajo",
+      "desc_en": "Companies and projects where I work"
     },
     {
       "label": "Contacto",
+      "label_en": "Contact",
       "shortLabel": "Contacto",
+      "shortLabel_en": "Contact",
       "href": "#contact",
-      "desc": "Escríbeme o dime hola"
+      "desc": "Escríbeme o dime hola",
+      "desc_en": "Write me or say hello"
     }
   ]
 }
